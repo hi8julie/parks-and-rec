@@ -3,8 +3,9 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-from config import database_key
+# from config import database_key
 import requests 
+import os
 from flask_cors import cross_origin
 
 from flask import Flask, jsonify
@@ -13,6 +14,7 @@ from flask import Flask, jsonify
 #################################################
 # Database Setup
 #################################################
+database_key = os.getenv("database_key")
 engine = create_engine(database_key)
 
 # reflect an existing database into a new model
