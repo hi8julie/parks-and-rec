@@ -4,3 +4,4 @@ sqlalchemy
 psycopg2
 numpy
 flask-cors
+requests 
